@@ -551,26 +551,32 @@ export const PROJECTS: PortfolioProject[] = [
       'Tienda web editorial para la marca IMMANOVA con nuevo Hero cinemático (10 modelos recortados aleatorios y tipografía full-bleed IMMANOVA / BLANKS), catálogo de 17 prendas lisas y 544 variantes, comparador interactivo de telas y compra por volumen.',
     detailedObjective:
       'Presentar la marca IMMANOVA ("Básicos Premium · Para tu marca y para vestir") con un Hero editorial de alto impacto visual, barra promocional IM10, marquesina informativa inferior, comparador interactivo de gramajes y filtrado de 544 variantes en tiempo real.',
-    screenshot: '/screenshots/immanova-live-home.png',
-    screenshotAlt: 'Captura real del nuevo Hero del sitio web de IMMANOVA desplegado en immanova.com',
-    screenshotCaption: 'Nuevo Hero oficial en producción (immanova.com) con modelos recortados, tipografía IMMANOVA / BLANKS y barra IM10.',
+    screenshot: '/screenshots/immanova-hero-v2.png',
+    screenshotAlt: 'Captura real del nuevo Hero oficial de IMMANOVA desplegado en immanova.com',
+    screenshotCaption: 'Nuevo Hero cinemático con modelo recortado, tipografía IMMANOVA / BLANKS y barra promocional IM10.',
     gallery: [
       {
-        src: '/screenshots/immanova-live-home.png',
-        alt: 'Nuevo Hero en vivo de immanova.com con tipografía full-bleed IMMANOVA BLANKS y modelos recortados',
-        caption: 'Portada actualizada en https://immanova.com con Hero cinemático de 10 modelos aleatorios, tipografía IMMANOVA / BLANKS, barra IM10 y marquesina inferior.',
+        src: '/screenshots/immanova-hero-v2.png',
+        alt: 'Nuevo Hero en vivo de immanova.com con tipografía full-bleed IMMANOVA BLANKS y modelo recortado',
+        caption: 'Portada oficial en https://immanova.com con Hero cinemático de modelo recortado, tipografía full-bleed IMMANOVA / BLANKS, barra promocional IM10 y marquesina inferior.',
         sourceLabel: 'Producción en vivo actualizada (immanova.com)'
       },
       {
-        src: '/screenshots/immanova-web-home.png',
-        alt: 'Sección Tu próximo básico con fotografías reales en immanova.com',
-        caption: 'Sección editorial "Tu próximo básico" con fotografías en alta resolución de las prendas lisas de algodón y performance.',
-        sourceLabel: 'Producción en vivo (immanova.com)'
+        src: '/screenshots/immanova-products-v2.png',
+        alt: 'Sección Tu próximo básico con fotografías reales y modelos en immanova.com',
+        caption: 'Sección "Tu próximo básico" con fotografías reales de producto y modelos (Playeras 150 en Turquesa, 180 en Amarillo, 190 en Azul Rey y 200 en Negro).',
+        sourceLabel: 'Producción en vivo actualizada (immanova.com)'
       },
       {
-        src: '/screenshots/immanova-web-catalog.png',
-        alt: 'Catálogo de 17 prendas y 544 variantes de IMMANOVA con filtros y fotografías reales',
-        caption: 'Catálogo en vivo (/catalogo) con 12 filtros combinables, fotografías de producto y tramos de precio por volumen (1, 6, 12, 24 y 72+ piezas).',
+        src: '/screenshots/immanova-pdp-v2.png',
+        alt: 'Ficha de producto real en immanova.com con selector de 17 colores y fotos en alta resolución',
+        caption: 'Ficha de producto en vivo (/producto/playera-regular-hombre-190) mostrando fotografías reales de prenda y modelo, selector de 17 colores y precios por volumen.',
+        sourceLabel: 'Producción en vivo (immanova.com/producto/playera-regular-hombre-190)'
+      },
+      {
+        src: '/screenshots/immanova-catalog-cards-v2.png',
+        alt: 'Catálogo de IMMANOVA con cuadrícula de productos y fotografías reales',
+        caption: 'Catálogo en vivo (/catalogo) con 12 filtros combinables y tarjetas de producto con fotografías reales de prendas y modelos.',
         sourceLabel: 'Producción en vivo (immanova.com/catalogo)'
       },
       {
