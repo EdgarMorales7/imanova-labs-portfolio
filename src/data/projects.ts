@@ -443,13 +443,13 @@ export const PROJECTS: PortfolioProject[] = [
         sourceLabel: 'Evidencia verificada (docs/evidencia-whatsapp)'
       }
     ],
-    primaryUrl: 'https://wa.me/527299312926?text=Hola%2C%20me%20interesa%20cotizar%20prendas%20lisas%20IMMANOVA',
+    primaryUrl: 'https://wa.me/525661928910?text=Hola%2C%20me%20interesa%20cotizar%20prendas%20lisas%20IMMANOVA',
     secondaryUrl: 'https://immanova-immanova-core.l6hmws.easypanel.host/login',
     secondaryActionLabel: 'Panel Core (Login)',
     actionLabel: 'Probar chatbot',
     accessType: 'whatsapp_channel',
     accessNotice:
-      'El enlace abre el contacto de WhatsApp configurado en el storefront de IMMANOVA (+52 729 931 2926). Nota de estado real: los contenedores immanova-core e immanova-n8n están desplegados en EasyPanel y los 7 workflows fueron validados E2E con OpenAI en entorno local, pero en producción se mantienen en modo seguro (SAFE-OFF / inactivos) hasta finalizar el alta comercial en Meta.',
+      'El enlace abre el contacto de WhatsApp oficial del chatbot de IMMANOVA (+52 56 6192 8910). Nota de estado real: los contenedores immanova-core e immanova-n8n están desplegados en EasyPanel y los 7 workflows fueron validados E2E con OpenAI en entorno local, pero en producción se mantienen en modo seguro (SAFE-OFF / inactivos) hasta finalizar el alta comercial en Meta.',
     status: 'deployed_safe_mode',
     statusLabel: 'Desplegado en modo seguro · Validado E2E en local',
     verifiedTechnologies: [
