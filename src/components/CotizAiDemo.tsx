@@ -144,11 +144,11 @@ export const CotizAiDemo: React.FC = () => {
   return (
     <section
       id="demo-cotiz-ai"
-      className="scroll-mt-20 border-t border-white/[0.07] bg-[#0b0e17] py-16 sm:py-20"
+      className="relative scroll-mt-20 border-t border-white/[0.07] bg-[#080b13] py-16 sm:py-24"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+        <div className="scroll-reveal flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-3.5 py-1 text-xs font-semibold text-indigo-300">
               <Sparkles className="h-3.5 w-3.5 text-indigo-400" />
@@ -179,7 +179,7 @@ export const CotizAiDemo: React.FC = () => {
         </div>
 
         {/* Scenario Selector */}
-        <div className="mt-8">
+        <div className="scroll-reveal mt-8">
           <p className="text-xs font-semibold tracking-wider text-slate-400 uppercase">
             1. Elige un caso de prueba para cargar en la consola:
           </p>
@@ -191,7 +191,7 @@ export const CotizAiDemo: React.FC = () => {
                   key={scenario.id}
                   type="button"
                   onClick={() => handleSelectScenario(scenario.id)}
-                  className={`flex flex-col items-start rounded-xl border p-3.5 text-left transition-all ${
+                  className={`interactive-card flex flex-col items-start rounded-xl border p-3.5 text-left ${
                     isSelected
                       ? 'border-indigo-500 bg-indigo-500/15 text-white shadow-sm'
                       : 'border-white/10 bg-[#0f1420] text-slate-300 hover:border-white/20 hover:bg-[#131929]'
@@ -218,7 +218,7 @@ export const CotizAiDemo: React.FC = () => {
         </div>
 
         {/* Main Interactive Console Frame */}
-        <div className="mt-6 overflow-hidden rounded-2xl border border-white/12 bg-[#0d1320] shadow-2xl">
+        <div className="scroll-reveal mt-6 overflow-hidden rounded-2xl border border-white/12 bg-[#0d1320] shadow-2xl">
           {/* Console Top Bar */}
           <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 bg-[#090d16] px-4 py-3 sm:px-6">
             <div className="flex items-center gap-2.5">

@@ -51,7 +51,7 @@ export interface VerifiedTechCategory {
 }
 
 export const PORTFOLIO_METADATA = {
-  brandHeader: 'IMANOVA LABS',
+  brandHeader: 'IMMANOVA LABS',
   projectTagline: 'AI PROJECTS · XOLVIRI LABS',
   heroTitle: 'Proyectos que conectan inteligencia artificial y soluciones reales.',
   heroDescription:
@@ -60,6 +60,59 @@ export const PORTFOLIO_METADATA = {
   sinceDate: 'Febrero 2026',
   footerText: 'Portafolio de proyectos desarrollados con asistencia de IA.',
   immanovaUrl: 'https://immanova.com'
+};
+
+export const AUTHOR_PROFILE = {
+  fullName: 'Edgar Morales Sarmiento',
+  shortName: 'Edgar Morales',
+  initials: 'EM',
+  avatarUrl: '/screenshots/edgar-morales.jpg',
+  headline: 'Ingeniero en Sistemas Automotrices | Automatización, IA y Desarrollo de Software',
+  location: 'Ciudad de México, CDMX',
+  email: 'morales147mx@gmail.com',
+  githubUrl: 'https://github.com/EdgarMorales7',
+  degree: 'Licenciatura en Ingeniería en Sistemas Automotrices',
+  institution: 'UPIITA - IPN (Instituto Politécnico Nacional)',
+  educationPeriod: '2020 – 2025',
+  summary:
+    'Ingeniero en Sistemas Automotrices (UPIITA - IPN) y desarrollador con enfoque en automatización comercial, integración de inteligencia artificial y construcción de soluciones digitales productivas. Experiencia diseñando chatbots transaccionales en WhatsApp mediante n8n, motores deterministas de cotización web y arquitecturas SaaS multi-tenant orientadas a ventas y operación real.',
+  languages: [
+    { language: 'Español', level: 'Nativo' },
+    { language: 'Inglés', level: 'Intermedio B1' }
+  ],
+  coreSkills: [
+    'AI Automation & Agentes LLM',
+    'Chatbots Comerciales (WhatsApp & n8n)',
+    'Desarrollo Web Full-Stack (React / Next.js / TypeScript)',
+    'Plataformas de Cotización Determinista',
+    'Automatización de Procesos Comerciales',
+    'Integración Hardware-Software & Python',
+    'Enfoque Técnico-Comercial y Ventas',
+    'Contenedores Docker & Despliegue Cloud'
+  ],
+  experience: [
+    {
+      period: '2026 – Presente',
+      role: 'Desarrollador Web, de Automatización e IA',
+      organization: 'FP Básicos Premium · IMMANOVA Labs',
+      highlights: [
+        'Desarrollo e implementación de chatbots para WhatsApp mediante n8n e integración de IA, orientados a automatizar la atención al cliente, seguimiento de conversaciones y asistencia en ventas.',
+        'Desarrollo de plataforma web de cotización para servicios de impresión DTG, enfocada en facilitar el cálculo determinista y generación de cotizaciones en PDF para clientes.',
+        'Automatización de respuestas, calificación de prospectos y asistencia en ventas de productos personalizados (DTG, DTF, bordado y prendas lisas por volumen).',
+        'Construcción e integración del ecosistema comercial Cotiz AI utilizando herramientas modernas de IA, Supabase RLS y contenedores en EasyPanel.'
+      ]
+    },
+    {
+      period: '2024 – 2025',
+      role: 'Proyecto Integrador para Titulación — Ingeniería e IA',
+      organization: 'UPIITA - IPN',
+      highlights: [
+        'Diseño y desarrollo de un sistema de automatización automotriz controlado mediante asistente de voz virtual.',
+        'Integración de Raspberry Pi y microcontroladores para el control en tiempo real de actuadores y subsistemas físicos.',
+        'Desarrollo de lógica de interacción en Python y arquitectura de comunicación bidireccional entre hardware y software.'
+      ]
+    }
+  ]
 };
 
 export const PROJECTS: PortfolioProject[] = [
@@ -406,9 +459,9 @@ export const PROJECTS: PortfolioProject[] = [
     ]
   },
   {
-    id: 'imanova-whatsapp-chatbot',
+    id: 'immanova-whatsapp-chatbot',
     number: '05',
-    name: 'Imanova — Chatbot de WhatsApp',
+    name: 'IMMANOVA — Chatbot de WhatsApp',
     category: 'Chatbot conversacional con IA',
     description:
       'Agente conversacional en WhatsApp especializado en venta por volumen de prendas lisas (blanks), con cálculo de tramos acumulables, transcripción de voz y cotización de envío manual.',
@@ -483,48 +536,48 @@ export const PROJECTS: PortfolioProject[] = [
     localPath: '/Users/edgar_sarmiento/Documents/IMMANOVA',
     repositoryUrl: 'https://github.com/EdgarMorales7/immanova',
     detectedIssuesAndNotes: [
-      'La imagen productiva actual (603184d) mantiene las capacidades comerciales apagadas deliberadamente mientras se concluye la verificación operativa final; los deltas más recientes ya están probados en la plataforma local.'
+      'La imagen productiva actual mantiene las capacidades comerciales apagadas deliberadamente mientras se concluye la verificación operativa final; los deltas más recientes ya están probados en la plataforma local.'
     ],
     pendingConfirmation: [
       'Verificación final del canal comercial en Meta Business y activación de flags productivos.'
     ]
   },
   {
-    id: 'imanova-sitio-web',
+    id: 'immanova-sitio-web',
     number: '06',
-    name: 'Imanova — Sitio web',
+    name: 'IMMANOVA — Sitio web',
     category: 'Sitio web de marca y e-commerce de blanks',
     description:
-      'Tienda web editorial para la marca IMMANOVA con catálogo de 17 prendas lisas y 544 variantes, comparador interactivo de telas y flujo de compra por volumen.',
+      'Tienda web editorial para la marca IMMANOVA con nuevo Hero cinemático (10 modelos recortados aleatorios y tipografía full-bleed IMMANOVA / BLANKS), catálogo de 17 prendas lisas y 544 variantes, comparador interactivo de telas y compra por volumen.',
     detailedObjective:
-      'Presentar la marca IMMANOVA ("Para tu marca y para vestir") con una experiencia web rápida, minimalista y optimizada en móvil que permite comparar gramajes y composiciones, filtrar 544 variantes por 12 criterios y armar lotes con precios escalonados por volumen.',
+      'Presentar la marca IMMANOVA ("Básicos Premium · Para tu marca y para vestir") con un Hero editorial de alto impacto visual, barra promocional IM10, marquesina informativa inferior, comparador interactivo de gramajes y filtrado de 544 variantes en tiempo real.',
     screenshot: '/screenshots/immanova-live-home.png',
-    screenshotAlt: 'Captura real del sitio web de IMMANOVA desplegado en immanova.com',
-    screenshotCaption: 'Sitio web oficial de IMMANOVA en producción (immanova.com) y vista del catálogo de 17 prendas.',
+    screenshotAlt: 'Captura real del nuevo Hero del sitio web de IMMANOVA desplegado en immanova.com',
+    screenshotCaption: 'Nuevo Hero oficial en producción (immanova.com) con modelos recortados, tipografía IMMANOVA / BLANKS y barra IM10.',
     gallery: [
       {
         src: '/screenshots/immanova-live-home.png',
-        alt: 'Portada en vivo de immanova.com',
-        caption: 'Home editorial desplegada en https://immanova.com (HTTP 200) con hero cinemático y comparador de telas.',
+        alt: 'Nuevo Hero en vivo de immanova.com con tipografía full-bleed IMMANOVA BLANKS y modelos recortados',
+        caption: 'Portada actualizada en https://immanova.com con Hero cinemático de 10 modelos aleatorios, tipografía IMMANOVA / BLANKS, barra IM10 y marquesina inferior.',
+        sourceLabel: 'Producción en vivo actualizada (immanova.com)'
+      },
+      {
+        src: '/screenshots/immanova-web-home.png',
+        alt: 'Sección Tu próximo básico con fotografías reales en immanova.com',
+        caption: 'Sección editorial "Tu próximo básico" con fotografías en alta resolución de las prendas lisas de algodón y performance.',
         sourceLabel: 'Producción en vivo (immanova.com)'
       },
       {
         src: '/screenshots/immanova-web-catalog.png',
-        alt: 'Catálogo de 17 prendas y 544 variantes de IMMANOVA',
-        caption: 'Catálogo con 12 filtros combinables, swatches de color HEX y tramos de precio por volumen (1, 6, 12, 24 y 72+ piezas).',
-        sourceLabel: 'Evidencia verificada (docs/evidencia-catalogo-publicado-local)'
-      },
-      {
-        src: '/screenshots/immanova-web-home.png',
-        alt: 'Vista editorial completa del storefront de IMMANOVA',
-        caption: 'Secciones editoriales de Blanks, Jerseys en preparación y comparador interactivo de gramajes.',
-        sourceLabel: 'Evidencia verificada (storefront-desktop)'
+        alt: 'Catálogo de 17 prendas y 544 variantes de IMMANOVA con filtros y fotografías reales',
+        caption: 'Catálogo en vivo (/catalogo) con 12 filtros combinables, fotografías de producto y tramos de precio por volumen (1, 6, 12, 24 y 72+ piezas).',
+        sourceLabel: 'Producción en vivo (immanova.com/catalogo)'
       },
       {
         src: '/screenshots/immanova-web-brand.png',
         alt: 'Página Sobre IMMANOVA y propuesta de marca',
         caption: 'Página /sobre-immanova explicando el enfoque en prendas lisas consistentes y el proceso de compra en 4 pasos.',
-        sourceLabel: 'Evidencia verificada (sobre-immanova-1440)'
+        sourceLabel: 'Evidencia verificada (/sobre-immanova)'
       }
     ],
     primaryUrl: 'https://immanova.com',
@@ -533,7 +586,7 @@ export const PROJECTS: PortfolioProject[] = [
     actionLabel: 'Ver sitio web',
     accessType: 'public_web',
     status: 'production',
-    statusLabel: 'En producción (immanova.com) · Modo catálogo/demo',
+    statusLabel: 'En producción (immanova.com) · Hero actualizado',
     verifiedTechnologies: [
       'Next.js 16 (App Router, RSC)',
       'React 19',
@@ -551,14 +604,14 @@ export const PROJECTS: PortfolioProject[] = [
       'n8n (notificaciones de cotización de envío manual y seguimiento de pedido)'
     ],
     verifiedFeatures: [
-      'Desplegado públicamente en https://immanova.com con certificado HTTPS activo y carga inicial optimizada (reducción de HTML inicial de ~429 KB a ~52 KB).',
+      'Nuevo Hero cinemático en https://immanova.com con rotación aleatoria de 10 modelos recortados en WebP, tipografía full-bleed IMMANOVA / BLANKS, insignias BÁSICOS PREMIUM, barra promocional IM10 y marquesina inferior.',
+      'Fotografías reales en alta resolución (WebP) ya integradas en producción para los primeros productos del catálogo (Playera Regular Hombre 150g, 180g, 190g, 200g y Performance 160g).',
       'Comparador interactivo de telas y gramajes (FabricComparator), guía visual de tallas/cortes (/guia-tallas) y páginas de marca (/sobre-immanova, /como-comprar, /informacion, /ayuda, /contacto).',
-      'Catálogo estructurado de 17 prendas oficiales (Playeras Regular 150g–200g, Performance, Blend, Manga Larga, Cuello V y Polos Piqué 210g/230g para hombre y mujer) con 544 variantes y 85 tramos de volumen.',
-      'Búsqueda y 12 filtros combinables sincronizados con la URL (categoría, género, corte, manga, cuello, composición, gramaje, color y talla).',
-      'Carrito resiliente y flujo completo de checkout con cotización de envío manual antes del pago verificado E2E en la plataforma local.'
+      'Catálogo estructurado de 17 prendas oficiales con 544 variantes, 85 tramos de volumen y 12 filtros combinables sincronizados con la URL.',
+      'Carrito resiliente y flujo completo de checkout con cotización de envío manual antes del pago verificado E2E.'
     ],
     inDevelopmentFeatures: [
-      'Integración en el contenedor productivo de las fotografías definitivas de las 17 prendas (carpetas locales Producto 1 a Producto 17).',
+      'Ingesta progresiva de las fotografías propias restantes del catálogo (Productos 6 a 17).',
       'Activación de compras y pagos en vivo en immanova.com (actualmente desplegado con COMMERCE_ENABLED=false y PAYMENTS_ENABLED=false para exploración segura).',
       'Línea de Jerseys de fútbol (/jerseys), mostrada honestamente como sección en preparación sin productos ficticios.'
     ],
@@ -567,10 +620,10 @@ export const PROJECTS: PortfolioProject[] = [
     localPath: '/Users/edgar_sarmiento/Documents/IMMANOVA/apps/storefront',
     repositoryUrl: 'https://github.com/EdgarMorales7/immanova',
     detectedIssuesAndNotes: [
-      'En immanova.com el sitio corre en modo demo controlado para permitir navegar catálogo, fichas y carrito de demostración sin generar órdenes ni cobros reales prematuros.'
+      'En immanova.com el sitio corre en modo demo controlado para permitir navegar el nuevo Hero, catálogo, fichas y carrito sin generar órdenes ni cobros reales prematuros.'
     ],
     pendingConfirmation: [
-      'Aprobación final de fotografías propias de los 17 productos y textos legales definitivos antes de encender COMMERCE_ENABLED=true en immanova.com.'
+      'Ingesta del resto de fotografías propias (Productos 6 a 17) antes de encender COMMERCE_ENABLED=true en immanova.com.'
     ]
   }
 ];
@@ -584,7 +637,7 @@ export const VERIFIED_TECH_CATEGORIES: VerifiedTechCategory[] = [
       {
         name: 'Next.js 16 & React 19',
         role: 'App Router, Server Components y arquitectura BFF sin exponer lógica comercial en el navegador.',
-        usedIn: ['CHP Sitio web', 'Cotiz AI', 'Imanova Sitio web', 'Imanova Core']
+        usedIn: ['CHP Sitio web', 'Cotiz AI', 'IMMANOVA Sitio web', 'IMMANOVA Core']
       },
       {
         name: 'TypeScript & Zod',
@@ -594,12 +647,12 @@ export const VERIFIED_TECH_CATEGORIES: VerifiedTechCategory[] = [
       {
         name: 'Tailwind CSS 4 & Radix UI',
         role: 'Sistemas de diseño oscuros/claros, modales accesibles (WCAG AA) y layouts responsivos.',
-        usedIn: ['FP Básicos Premium', 'CHP Sitio web', 'Cotiz AI', 'Imanova Sitio web']
+        usedIn: ['FP Básicos Premium', 'CHP Sitio web', 'Cotiz AI', 'IMMANOVA Sitio web']
       },
       {
         name: 'Vite & Zustand',
         role: 'Construcción ultrarrápida y estado persistente para el wizard de cotización DTG.',
-        usedIn: ['FP Básicos Premium', 'Portafolio IMANOVA LABS']
+        usedIn: ['FP Básicos Premium', 'Portafolio IMMANOVA LABS']
       }
     ]
   },
@@ -611,22 +664,22 @@ export const VERIFIED_TECH_CATEGORIES: VerifiedTechCategory[] = [
       {
         name: 'n8n Self-Hosted',
         role: 'Orquestación de agentes de ventas por WhatsApp, webhooks comerciales, envíos y alertas.',
-        usedIn: ['FP Básicos Premium', 'CHP Chatbot', 'Cotiz AI', 'Imanova Chatbot']
+        usedIn: ['FP Básicos Premium', 'CHP Chatbot', 'Cotiz AI', 'IMMANOVA Chatbot']
       },
       {
         name: 'OpenAI Responses & Vision API',
         role: 'Extracción estructurada de pedidos, detección de plastas/bocetos en diseños DTG y agente conversacional.',
-        usedIn: ['FP Básicos Premium', 'CHP Chatbot', 'Cotiz AI', 'Imanova Chatbot']
+        usedIn: ['FP Básicos Premium', 'CHP Chatbot', 'Cotiz AI', 'IMMANOVA Chatbot']
       },
       {
         name: 'OpenAI Whisper',
         role: 'Transcripción automática de notas de voz de WhatsApp para cotizar solicitudes habladas.',
-        usedIn: ['CHP Chatbot', 'Cotiz AI', 'Imanova Chatbot']
+        usedIn: ['CHP Chatbot', 'Cotiz AI', 'IMMANOVA Chatbot']
       },
       {
         name: 'Meta WhatsApp Cloud API',
         role: 'Recepción y envío de mensajes, documentos PDF y plantillas con validación criptográfica HMAC.',
-        usedIn: ['CHP Chatbot', 'Cotiz AI', 'Imanova Chatbot']
+        usedIn: ['CHP Chatbot', 'Cotiz AI', 'IMMANOVA Chatbot']
       }
     ]
   },
@@ -643,12 +696,12 @@ export const VERIFIED_TECH_CATEGORIES: VerifiedTechCategory[] = [
       {
         name: 'Motores Deterministas en Centavos',
         role: 'Cálculo exacto de escalones de volumen, puntadas de bordado, DTG e IVA 16% sin alucinaciones.',
-        usedIn: ['FP Básicos Premium', 'CHP Chatbot & Web', 'Cotiz AI', 'Imanova Chatbot & Web']
+        usedIn: ['FP Básicos Premium', 'CHP Chatbot & Web', 'Cotiz AI', 'IMMANOVA Chatbot & Web']
       },
       {
         name: 'pdf-lib & PDF.co',
         role: 'Generación automática de cotizaciones foliadas en PDF listas para enviar por WhatsApp o correo.',
-        usedIn: ['FP Básicos Premium', 'CHP Chatbot', 'Cotiz AI', 'Imanova Chatbot']
+        usedIn: ['FP Básicos Premium', 'CHP Chatbot', 'Cotiz AI', 'IMMANOVA Chatbot']
       },
       {
         name: 'ClamAV Antivirus',
@@ -680,7 +733,7 @@ export const VERIFIED_TECH_CATEGORIES: VerifiedTechCategory[] = [
       {
         name: 'Vitest, PGlite & Playwright',
         role: 'Más de 1,600 pruebas unitarias/integración en bases aisladas y pruebas E2E de navegador y accesibilidad.',
-        usedIn: ['CHP Sitio web', 'Cotiz AI', 'Imanova']
+        usedIn: ['CHP Sitio web', 'Cotiz AI', 'IMMANOVA']
       }
     ]
   }

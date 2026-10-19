@@ -1,16 +1,23 @@
 @import "tailwindcss";
 
+@property --animation-reduced {
+  syntax: "*";
+  inherits: false;
+  initial-value: none;
+}
+
 @layer base {
   :root {
     color-scheme: dark;
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --font-display: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    --font-display: 'Plus Jakarta Sans', 'Space Grotesk', 'Inter', sans-serif;
+    --font-brand: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
     --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
   }
 
   body {
     font-family: var(--font-sans);
-    background-color: #090b10;
+    background-color: #06080f;
     color: #f1f5f9;
     overflow-x: hidden;
   }
@@ -19,12 +26,200 @@
     font-family: var(--font-display);
   }
 
+  .font-brand {
+    font-family: var(--font-brand);
+  }
+
   code, pre, .font-mono {
     font-family: var(--font-mono);
   }
 }
 
-/* Modern Web Guidance: Prevent underlying page scroll under modal <dialog> */
+/* Subtle architectural grid and surface tokens */
+.bg-architectural-grid {
+  background-size: 44px 44px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.028) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.028) 1px, transparent 1px);
+}
+
+.surface-card {
+  background: linear-gradient(180deg, rgba(17, 23, 38, 0.88) 0%, rgba(11, 15, 25, 0.94) 100%);
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.09),
+    0 12px 32px -12px rgba(2, 6, 23, 0.7);
+}
+
+.surface-card-elevated {
+  background: linear-gradient(180deg, rgba(22, 30, 49, 0.92) 0%, rgba(12, 17, 29, 0.96) 100%);
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.12),
+    0 20px 45px -15px rgba(2, 6, 23, 0.85);
+}
+
+/* Modern Web Guidance: Individual Transform Properties with mandatory identity base */
+.interactive-card {
+  translate: 0px 0px;
+  scale: 1;
+  rotate: 0deg;
+  transition:
+    translate 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+    scale 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.28s ease,
+    box-shadow 0.32s ease,
+    background-color 0.28s ease;
+}
+
+.interactive-card:hover {
+  translate: 0px -5px;
+  scale: 1.006;
+  box-shadow:
+    inset 0 1px 0 0 rgba(129, 140, 248, 0.28),
+    0 22px 44px -14px rgba(79, 70, 229, 0.22),
+    0 10px 24px -10px rgba(2, 6, 23, 0.85);
+}
+
+.interactive-btn {
+  translate: 0px 0px;
+  scale: 1;
+  rotate: 0deg;
+  transition:
+    translate 0.22s cubic-bezier(0.22, 1, 0.36, 1),
+    scale 0.22s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.22s ease;
+}
+
+.interactive-btn:hover {
+  translate: 0px -1.5px;
+  scale: 1.015;
+}
+
+.interactive-btn:active {
+  translate: 0px 0px;
+  scale: 0.99;
+}
+
+/* Gentle floating ambient animation using individual translate property */
+@keyframes ambient-float {
+  0%, 100% {
+    translate: 0px 0px;
+  }
+  50% {
+    translate: 0px -8px;
+  }
+}
+
+.animate-ambient-float {
+  translate: 0px 0px;
+  animation: ambient-float 6s ease-in-out infinite;
+  --animation-reduced: none;
+}
+
+/* Top Scroll Progress Indicator using CSS Scroll-Driven Animations */
+@keyframes scroll-progress-scale {
+  from {
+    scale: 0 1;
+  }
+  to {
+    scale: 1 1;
+  }
+}
+
+.scroll-progress-bar {
+  transform-origin: 0% 50%;
+  scale: var(--scroll-progress, 0) 1;
+}
+
+@supports (animation-timeline: scroll()) {
+  .scroll-progress-bar {
+    scale: 1 1;
+    animation: scroll-progress-scale linear both;
+    animation-timeline: scroll(root);
+    --animation-reduced: scroll-progress-scale linear both;
+  }
+}
+
+/* Scroll-Driven Reveal Animations with Progressive Enhancement + IntersectionObserver Fallback */
+@keyframes scroll-reveal-up {
+  from {
+    opacity: 0;
+    translate: 0px 28px;
+    scale: 0.985;
+  }
+  to {
+    opacity: 1;
+    translate: 0px 0px;
+    scale: 1;
+  }
+}
+
+.scroll-reveal {
+  opacity: 1;
+  translate: 0px 0px;
+  scale: 1;
+}
+
+/* Native CSS Scroll-Driven View Timeline when supported */
+@supports ((animation-timeline: view()) and (animation-range: entry)) {
+  .scroll-reveal {
+    animation: scroll-reveal-up cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-timeline: view();
+    animation-range: entry 8% cover 24%;
+    --animation-reduced: none;
+  }
+}
+
+/* Fallback for browsers without animation-timeline: view() */
+@supports not ((animation-timeline: view()) and (animation-range: entry)) {
+  .scroll-reveal[data-reveal-ready="true"]:not([data-revealed="true"]) {
+    opacity: 0;
+    translate: 0px 24px;
+    scale: 0.985;
+  }
+
+  .scroll-reveal[data-reveal-ready="true"] {
+    transition:
+      opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+      translate 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+      scale 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  .scroll-reveal[data-revealed="true"] {
+    opacity: 1;
+    translate: 0px 0px;
+    scale: 1;
+  }
+}
+
+/* Hero entry animation using @starting-style */
+.hero-entrance {
+  opacity: 1;
+  translate: 0px 0px;
+  transition:
+    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    translate 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--entrance-delay, 0ms);
+
+  @starting-style {
+    opacity: 0;
+    translate: 0px 18px;
+  }
+}
+
+/* Modern Web Guidance: Top-Layer <dialog> Entry & Exit Animations */
+dialog {
+  opacity: 0;
+  scale: 0.96;
+  translate: 0px 10px;
+  transition-property: opacity, scale, translate, display, overlay;
+  transition-duration: 0.28s;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  transition-behavior: allow-discrete;
+}
+
 dialog:modal {
   overscroll-behavior: contain;
 }
@@ -32,6 +227,61 @@ dialog:modal {
 dialog::backdrop {
   overflow: hidden;
   overscroll-behavior: contain;
-  background-color: rgba(5, 7, 12, 0.82);
-  backdrop-filter: blur(6px);
+  background-color: rgba(4, 6, 12, 0);
+  backdrop-filter: blur(0px);
+  transition-property: background-color, backdrop-filter, display, overlay;
+  transition-duration: 0.28s;
+  transition-timing-function: ease-out;
+  transition-behavior: allow-discrete;
+}
+
+:is(dialog[open]):where(:not([data-closing])) {
+  opacity: 1;
+  scale: 1;
+  translate: 0px 0px;
+
+  @starting-style {
+    opacity: 0;
+    scale: 0.96;
+    translate: 0px 10px;
+  }
+
+  &::backdrop {
+    background-color: rgba(4, 6, 12, 0.84);
+    backdrop-filter: blur(8px);
+
+    @starting-style {
+      background-color: rgba(4, 6, 12, 0);
+      backdrop-filter: blur(0px);
+    }
+  }
+}
+
+/* Modern Web Guidance: Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: var(--animation-reduced) !important;
+  }
+
+  .interactive-card,
+  .interactive-btn,
+  .hero-entrance,
+  .scroll-reveal {
+    translate: none !important;
+    scale: none !important;
+    transition-duration: 0.1s !important;
+  }
+
+  dialog {
+    scale: none;
+    translate: none;
+    transition-duration: 0.1s;
+  }
+
+  @starting-style {
+    :is(dialog[open]):where(:not([data-closing])) {
+      scale: none;
+      translate: none;
+    }
+  }
 }

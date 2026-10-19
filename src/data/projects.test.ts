@@ -1,13 +1,15 @@
 import { describe, expect, it } from 'vitest';
 import fs from 'node:fs';
 import path from 'node:path';
-import { PORTFOLIO_METADATA, PROJECTS, VERIFIED_TECH_CATEGORIES } from './projects';
+import { AUTHOR_PROFILE, PORTFOLIO_METADATA, PROJECTS, VERIFIED_TECH_CATEGORIES } from './projects';
 import { calculateCotizAiDemoQuote, DEMO_SCENARIOS } from './cotizAiDemoData';
 
-describe('IMANOVA LABS Portfolio Inventory & Integrity', () => {
-  it('contains exactly the 6 required projects numbered 01 to 06', () => {
+describe('IMMANOVA LABS Portfolio Inventory & Integrity', () => {
+  it('contains exactly the 6 required projects numbered 01 to 06 and IMMANOVA LABS brand', () => {
     expect(PROJECTS).toHaveLength(6);
     expect(PROJECTS.map((p) => p.number)).toEqual(['01', '02', '03', '04', '05', '06']);
+    expect(PORTFOLIO_METADATA.brandHeader).toBe('IMMANOVA LABS');
+    expect(AUTHOR_PROFILE.fullName).toBe('Edgar Morales Sarmiento');
     expect(PORTFOLIO_METADATA.heroTitle).toBe(
       'Proyectos que conectan inteligencia artificial y soluciones reales.'
     );
